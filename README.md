@@ -1,6 +1,5 @@
 # Deep-learning-lip-reader
-
-![Watch the demo video](https://github.com/user-attachments/assets/d9f69e9f-02e3-4f67-b97d-de76bbb4116a)
+![demo](https://github.com/user-attachments/assets/c0323f94-9992-42c2-a4f4-6d0765e6e407)
 
 ## Project Overview
 
@@ -12,6 +11,8 @@ Read the paper for a more in-depth explanation [here](https://docs.google.com/do
 
 Due to the lack of an existing dataset that met the requirements, a custom dataset was created by collecting approximately 600 individual videos of spoken words. Database was around 2 gb in size after finalization
 
+![Untitled video - Made with Clipchamp (3)](https://github.com/user-attachments/assets/d0845600-0920-4fb7-8cb2-d2db7cb9990b)
+
 **Data Collection Process:**
 
 1. **Detect Speaking**:
@@ -20,7 +21,7 @@ Due to the lack of an existing dataset that met the requirements, a custom datas
 2. **Record Frames**:
    - Start capturing frames when speech is detected.
    - Users may close their mouths intermittently. If lips remain closed for too long, it is assumed that speaking has stopped.
-   
+  
 3. **Finalize Recording**:
    - Stop capturing frames once speech has ceased.
    - Add "previous" and "after" frames to the recorded sequence:
@@ -32,18 +33,13 @@ Recording:
 
 ## Files/Folders
 
-- `writeup.pdf`: a detailed documentation of my entire project. To view the gifs, please visit [here](https://docs.google.com/document/d/1FLVwjXf4BfxgjIBl9CszCMwwwQ-Tm0crAv71qGPmLCM/edit).
+- `writeup.pdf`: a detailed documentation of my entire project.
 
 - `/data_collection/collect.py`: This script is used to collect the data for training the speech recognition model. It records audio clips of people speaking the different commands and saves them to a directory.
-
-- `/training/3DCNN.ipynb`: This Jupyter Notebook contains the code used to train the speech recognition model. It uses a 3D convolutional neural network to extract features from the audio clips and then classifies them using a softmax layer.
 
 - `/demo/predict_live.py`: This script can be used to test my trained speech recognition model in a live demo. It uses similar logic from the data collection script by collecting frames, feeding it into the model, and then displays the predicted command.
 
 - `/model/`: contains various model weights for trained models.
-
-- `/demo_examples/`: mp4 files containing recorded demos of my model predicting words that I spoke in real-time.
-
 
 ## Usage
 
@@ -52,27 +48,17 @@ To use my project, please read the following:
 1. Run `collect.py` to record audio clips of yourself speaking a chosen word and save them to a directory.
     - First, enter the word you want to collect data for.
     - If this is your first time running the script, do not enter a lip distance (it will calibrate itself).
-2. View `/training/3DCNN.ipynb` to see how I trained the speech recognition model on my collected data.
-3. Use `predict_live.py` to test the trained model in a live demo. 
+2. Use `predict_live.py` to test the trained model in a live demo. 
 
 ## Challenges and Problems Encountered
 
 During the development of this project, several technical challenges were encountered:
 
 1. **Dataset Creation**:
-   - Constructing a high-quality, diverse dataset involved significant time investment. Ensuring consistency in video recording conditions and accurately labeling each clip presented difficulties, affecting the overall reliability of the training data.
+   - Constructing a high-quality, diverse dataset required a ridiculous amount of time to complete. Ensuring consistency in video recording conditions and accurately labeling each clip presented difficulties, affecting the overall reliability of the training data.
 
 2. **Model Training**:
-   - Training the model required substantial computational resources. The optimization of hyperparameters, such as learning rates and batch sizes, demanded multiple iterations. Achieving convergence and preventing overfitting necessitated careful tuning and the use of regularization techniques.
-
-3. **Real-time Inference**:
-   - Achieving efficient real-time performance while maintaining high accuracy was challenging. The model's inference speed and latency were critical, requiring optimization of the model architecture and processing pipeline to handle live inputs effectively.
-
-4. **System Compatibility**:
-   - The live prediction script faced compatibility issues across different operating systems and hardware configurations. Ensuring consistent performance across diverse setups required adjustments to the system dependencies and calibration settings.
-
-5. **File Size Limitations**:
-   - Managing large model files for upload and distribution posed constraints. Due to file size restrictions, the more accurate model weights could not be shared, limiting the accessibility of the model's full potential.
+   - Training the model required substantial computational resources. The optimization of hyperparameters, such as learning rates and batch sizes, demanded multiple iterations. Achieving convergence and preventing overfitting necessitated careful tuning and the use of regularization techniques. Was heavily limited by the gpu power of my PC.
 
 ## Future Improvements
 
@@ -81,17 +67,11 @@ To enhance the project and address the identified challenges, the following tech
 1. **Dataset Augmentation**:
    - Expand the dataset by incorporating a greater number of video samples with varied environmental conditions and speaker demographics. Techniques such as data augmentation and synthetic data generation could further enhance dataset diversity and model robustness.
 
-2. **Advanced Model Architectures**:
-   - Explore the integration of more sophisticated neural network architectures, such as Transformer models or EfficientNet, to improve feature extraction and classification accuracy. Implementing advanced techniques like self-supervised learning or transfer learning could also boost model performance.
-
 3. **Inference Optimization**:
    - Optimize the inference pipeline by leveraging model quantization, pruning, or deploying the model on specialized hardware accelerators like GPUs or TPUs to reduce latency and improve real-time responsiveness.
 
 4. **User Interface Development**:
    - Develop a graphical user interface (GUI) to facilitate user interaction and visualization of model predictions. Implementing an intuitive GUI with real-time feedback could enhance user experience and accessibility.
-
-5. **Multilingual and Multimodal Support**:
-   - Extend the system to support multiple languages and dialects. Incorporate multimodal inputs, such as audio alongside video, to improve recognition accuracy and adaptability across different linguistic contexts.
 
 
 
