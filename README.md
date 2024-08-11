@@ -1,6 +1,6 @@
 # Deep-learning-lip-reader
 
-[[Watch the demo video](https://github.com/oneminutesoup/Deep-learning-lip-reader/blob/be403fdb95f4f0a99224f04c6c5b843e0873a340/demo_videos/My%2C%20Demo.mp4)](https://github.com/user-attachments/assets/d9f69e9f-02e3-4f67-b97d-de76bbb4116a)
+![Watch the demo video](https://github.com/user-attachments/assets/d9f69e9f-02e3-4f67-b97d-de76bbb4116a)
 
 ## Project Overview
 
