@@ -33,8 +33,6 @@ Recording:
 
 ## Files/Folders
 
-- `writeup.pdf`: a detailed documentation of my entire project.
-
 - `/data_collection/collect.py`: This script is used to collect the data for training the speech recognition model. It records audio clips of people speaking the different commands and saves them to a directory.
 
 - `/demo/predict_live.py`: This script can be used to test my trained speech recognition model in a live demo. It uses similar logic from the data collection script by collecting frames, feeding it into the model, and then displays the predicted command.
