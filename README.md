@@ -44,7 +44,7 @@ Due to the lack of an existing dataset that met the requirements, a custom datas
 
 ## Usage
 
-To use my project, please read the following:
+To use the project for yourself, please read the following:
 
 1. Run `collect.py` to record audio clips of yourself speaking a chosen word and save them to a directory.
     - First, enter the word you want to collect data for.
