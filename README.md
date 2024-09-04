@@ -2,7 +2,7 @@
 
 Read the academic paper here for a more in-depth explanation [here](https://docs.google.com/document/d/1wcgc2VE5HnOLy8nQ6LmYVnoI-_koHmark5gJUKDQPj4/edit)!
 
-![demo](https://github.com/user-attachments/assets/c0323f94-9992-42c2-a4f4-6d0765e6e407)
+![Hello Demo](https://github.com/user-attachments/assets/1310594b-0378-410a-8a7a-eb4e715c18de)
 
 ## Project Overview
 
